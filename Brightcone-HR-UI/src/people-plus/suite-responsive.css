@@ -1,0 +1,155 @@
+@media (max-width: 1200px) {
+  .pp-shell {
+    @apply [grid-template-columns:215px_minmax(0,1fr)];
+  }
+  .pp-suite-app-grid {
+    @apply [grid-template-columns:repeat(2,minmax(0,1fr))];
+  }
+  .pp-content {
+    @apply [padding-right:22px] [padding-left:22px];
+  }
+  .pp-header {
+    @apply [padding-right:18px] [padding-left:18px];
+  }
+}
+@media (max-width: 900px) {
+  .pp-rail {
+    @apply [width:62px] [padding-right:6px] [padding-left:6px];
+  }
+  .pp-rail-app {
+    @apply [min-height:46px];
+  }
+  .pp-rail-app span {
+    @apply [font-size:7px];
+  }
+  .pp-rail-app.active:before {
+    @apply [left:-6px];
+  }
+  .pp-shell {
+    @apply [margin-left:62px] [grid-template-columns:205px_minmax(0,1fr)];
+  }
+  .pp-command-trigger {
+    @apply [width:40px] [justify-content:center] [padding:0];
+  }
+  .pp-command-trigger span,
+  .pp-command-trigger kbd {
+    @apply [display:none];
+  }
+  .pp-user > span:not(.pp-avatar) {
+    @apply [display:none];
+  }
+  .pp-dash-metrics {
+    @apply [grid-template-columns:repeat(2,minmax(0,1fr))];
+  }
+}
+@media (max-width: 680px) {
+  .pp-rail {
+    @apply [display:none];
+  }
+  .pp-shell {
+    @apply [display:block] [margin:0];
+  }
+  .pp-sidebar-wrap {
+    @apply [position:fixed] [z-index:40] [top:0] [bottom:0] [left:0] [width:260px] [height:100dvh] [min-height:0] [transform:translateX(-105%)] [transition:transform_.2s];
+  }
+  .pp-sidebar-wrap.is-open {
+    @apply [transform:translateX(0)];
+  }
+  .pp-sidebar {
+    @apply [padding:16px_12px];
+  }
+  .pp-sidebar-collapse {
+    @apply [display:grid] [place-items:center] [width:30px] [height:30px];
+  }
+  .pp-backdrop {
+    @apply [display:block] [position:fixed] [z-index:35] [inset:0] [border:0] [background:#06101f88];
+  }
+  .pp-header {
+    @apply [height:56px] [padding:0_12px] [gap:8px];
+  }
+  .pp-mobile-menu {
+    @apply [display:grid];
+  }
+  .pp-launcher-button {
+    @apply [width:30px] [height:30px];
+  }
+  .pp-breadcrumb {
+    @apply [font-size:10px];
+  }
+  .pp-header-actions {
+    @apply [gap:2px];
+  }
+  .pp-header-divider,
+  .pp-signout {
+    @apply [display:none];
+  }
+  .pp-content {
+    @apply [padding:0_15px_30px];
+  }
+  .pp-suite-dashboard {
+    @apply [padding-top:23px];
+  }
+  .pp-suite-welcome {
+    @apply [align-items:flex-start] [flex-direction:column] [gap:12px];
+  }
+  .pp-suite-welcome-actions {
+    @apply [width:100%] [justify-content:space-between];
+  }
+  .pp-suite-welcome h1 {
+    @apply [font-size:22px];
+  }
+  .pp-dash-metrics {
+    @apply [gap:8px];
+  }
+  .pp-dash-metric {
+    @apply [min-height:75px] [padding:10px] [gap:8px];
+  }
+  .pp-dash-metric-icon {
+    @apply [width:30px] [height:30px];
+  }
+  .pp-dash-metric strong {
+    @apply [font-size:14px];
+  }
+  .pp-suite-app-grid {
+    @apply [gap:7px];
+  }
+  .pp-suite-app-card {
+    @apply [min-height:75px] [padding:8px] [gap:7px];
+  }
+  .pp-suite-app-icon {
+    @apply [width:30px] [height:30px];
+  }
+  .pp-suite-app-status {
+    @apply [display:none];
+  }
+  .pp-suite-lower {
+    @apply [gap:8px];
+  }
+  .pp-dash-panel {
+    @apply [padding:11px];
+  }
+  .pp-coming-state {
+    @apply [align-items:flex-start] [flex-wrap:wrap] [gap:7px];
+  }
+  .pp-coming-state > p {
+    @apply [width:100%] [margin-left:40px];
+  }
+  .pp-launcher-grid {
+    @apply [grid-template-columns:repeat(2,1fr)];
+  }
+}
+@media (max-width: 390px) {
+  .pp-breadcrumb span,
+  .pp-breadcrumb > svg {
+    @apply [display:none];
+  }
+  .pp-suite-app-grid {
+    @apply [grid-template-columns:1fr];
+  }
+  .pp-suite-lower {
+    @apply [grid-template-columns:1fr];
+  }
+  .pp-api-indicator {
+    @apply [font-size:9px];
+  }
+}

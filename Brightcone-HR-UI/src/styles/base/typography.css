@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Typography & Global Base Styles - Under 400 lines
+   ========================================================================== */
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-body);
+  font-family: 'Figtree', 'Sora', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sora', 'Figtree', sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: var(--text-title);
+}
+
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+.font-figtree {
+  font-family: 'Figtree', sans-serif;
+}
+
+/* Page Section Badges */
+.page-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.page-badge-recruit {
+  color: #818CF8;
+}
+
+.page-badge-people {
+  color: #14B8A6;
+}
+
+.page-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.page-badge-recruit .page-badge-dot {
+  background-color: #6366F1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.8);
+}
+
+.page-badge-people .page-badge-dot {
+  background-color: #0D9488;
+  box-shadow: 0 0 8px rgba(13, 148, 136, 0.8);
+}
+
+/* Presentation Hero Showcase (.lp) - Deep midnight navy in both light & dark modes */
+.lp-hero-bg {
+  background-color: #06101F !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .lp-hero-bg {
+  background-color: #040A1A !important;
+}
+
+.lp-conic-glow {
+  background: conic-gradient(from 210deg, #0B87FF, #14B8E6, transparent 62%);
+  filter: blur(60px);
+  opacity: 0.5;
+}
+
+.lp-grid-overlay {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(180deg, #000 10%, transparent 85%);
+  -webkit-mask-image: linear-gradient(180deg, #000 10%, transparent 85%);
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}

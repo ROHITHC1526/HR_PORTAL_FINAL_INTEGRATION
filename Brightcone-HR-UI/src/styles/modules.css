@@ -1,0 +1,210 @@
+/* =========================================================
+   APP-SPECIFIC MODULES — Brightcone People Plus
+   ========================================================= */
+
+/* Hero & Workday Clock */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--brand-navy);
+  color: #fff;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  right: -80px;
+  top: -120px;
+  width: 420px;
+  height: 420px;
+  background: conic-gradient(from 200deg at 50% 50%, var(--brand), var(--brand-2), transparent 60%);
+  filter: blur(40px);
+  opacity: 0.55;
+}
+.hero > * {
+  position: relative;
+}
+.hero h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.hero p {
+  color: #c9d3ee;
+  margin: 6px 0 0;
+}
+.clock {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: auto;
+  padding-top: 22px;
+  flex-wrap: wrap;
+}
+.clock .time {
+  font: 600 34px/1 Sora, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.clock .lbl {
+  font-size: 12.5px;
+  color: #c9d3ee;
+}
+
+/* Department bars & Quick actions */
+.dept-bars .r {
+  display: grid;
+  grid-template-columns: 130px 1fr 34px;
+  gap: 10px;
+  align-items: center;
+  font-size: 13.5px;
+  margin-bottom: 10px;
+}
+.dept-bars.wide .r {
+  grid-template-columns: 130px 1fr 56px;
+}
+.dept-bars .r span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dept-bars .r em {
+  font-style: normal;
+  color: var(--muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.quick {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.quick button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13.5px;
+  text-align: left;
+}
+.quick button:hover {
+  border-color: var(--brand);
+}
+.quick button i {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--ac, var(--brand)) 13%, transparent);
+  color: var(--ac, var(--brand));
+}
+
+/* App Cards & Launcher */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 14px;
+}
+.appcard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 16px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  cursor: pointer;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+.appcard::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--c);
+  opacity: 0.85;
+}
+.appcard:hover {
+  border-color: color-mix(in srgb, var(--c) 55%, var(--line));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.appcard .t {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.appcard .t i {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(140deg, color-mix(in srgb, var(--c) 65%, #fff) -20%, var(--c) 60%);
+  flex: none;
+  box-shadow: 0 8px 18px -10px var(--c), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.appcard .t b {
+  font: 600 15px Sora, sans-serif;
+  flex: 1;
+}
+.appcard .t .go {
+  color: var(--faint);
+  display: grid;
+}
+.appcard:hover .t .go {
+  color: var(--c);
+}
+.appcard .m {
+  font: 600 24px/1.1 Sora, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.appcard .m small {
+  font: 500 12.5px Figtree, sans-serif;
+  color: var(--muted);
+  margin-left: 6px;
+}
+.appcard p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+/* Sections & Date Chips */
+.sect {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 28px 0 12px;
+}
+.dchip {
+  width: 44px;
+  flex: none;
+  text-align: center;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--ac, var(--brand)) 12%, transparent);
+  color: var(--ac, var(--brand));
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 5px 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.dchip b {
+  display: block;
+  font: 600 17px Sora, sans-serif;
+  letter-spacing: 0;
+}

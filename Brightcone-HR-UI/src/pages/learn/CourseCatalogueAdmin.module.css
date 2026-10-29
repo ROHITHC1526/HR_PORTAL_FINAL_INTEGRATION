@@ -1,0 +1,293 @@
+/* CourseCatalogueAdmin.module.css — Matching Reference Computed Cascade */
+
+.tabBar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line, #e2e8f0);
+  padding-bottom: 12px;
+}
+
+.tabBtn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted, #64748b);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.tabBtn:hover {
+  color: var(--text, #0f172a);
+  background: var(--surface-2, #f1f5f9);
+}
+
+.tabActive {
+  color: var(--brand, #2563eb);
+  background: var(--info-bg, #eff6ff);
+  font-weight: 600;
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.titleArea {
+  max-width: 680px;
+}
+
+.title {
+  font-family: Sora, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--text);
+  margin: 0;
+}
+
+.desc {
+  font-size: 14.5px;
+  color: var(--muted);
+  margin: 6px 0 0;
+  max-width: 68ch;
+}
+
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 11px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--brand, #0B6FDB) 82%, #fff), var(--brand, #0B6FDB));
+  color: #FFFFFF;
+  border: 1px solid color-mix(in srgb, var(--brand, #0B6FDB) 85%, #000);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 8px 18px -10px var(--brand, #0B6FDB);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.addBtn:hover {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--brand, #0B6FDB) 90%, #fff), color-mix(in srgb, var(--brand, #0B6FDB) 90%, #000));
+  transform: translateY(-1px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 12px 22px -10px var(--brand, #0B6FDB);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg, 18px);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.cardTitle {
+  font-family: Sora, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  margin: 0 -20px -20px;
+  border-top: 1px solid var(--line);
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+}
+
+.table th {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  color: var(--faint);
+  background: color-mix(in srgb, var(--surface-2) 70%, var(--surface));
+  padding: 11px 20px;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 12px 20px;
+  border-top: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+  white-space: nowrap;
+  vertical-align: middle;
+  color: var(--text);
+}
+
+.table tbody tr:hover td {
+  background: color-mix(in srgb, #6366F1 4.5%, transparent);
+}
+
+.courseCell {
+  white-space: normal !important;
+  max-width: 340px;
+  min-width: 180px;
+}
+
+.courseTitle {
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.courseDur {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: 2px 0 0;
+}
+
+/* Reference status pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, currentColor 16%, transparent);
+}
+
+.pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.pWarn {
+  background: var(--warn-bg, #FFF4DB);
+  color: var(--warn, #C98200);
+}
+
+.pInfo {
+  background: var(--info-bg, #E3F0FF);
+  color: var(--brand, #0B6FDB);
+}
+
+/* Reference Progress Bar */
+.bar {
+  height: 7px;
+  border: 0;
+  background: color-mix(in srgb, var(--line) 70%, var(--surface-2));
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, color-mix(in srgb, #6366F1 70%, #fff), #6366F1);
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.actionsCell {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.actionIconBtn {
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+  box-shadow: none;
+  padding: 5px 7px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.actionIconBtn:hover {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.actionRemindBtn {
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.actionRemindBtn:hover {
+  background: var(--surface-2);
+  border-color: color-mix(in srgb, #6366F1 40%, var(--line));
+}
+
+.actionAssignBtn {
+  padding: 5px 11px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--brand, #0B6FDB) 30%, transparent);
+  background: var(--info-bg, #EFF6FF);
+  color: var(--brand, #0B6FDB);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.actionAssignBtn:hover {
+  background: color-mix(in srgb, var(--brand, #0B6FDB) 15%, transparent);
+  transform: translateY(-1px);
+}
+
+.emptyState {
+  padding: 28px 10px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}

@@ -1,0 +1,202 @@
+/* =========================================================
+   TABLES, INPUTS, TABS & BADGES — Brightcone People Plus
+   ========================================================= */
+
+/* Avatars & Person Cells */
+.av {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 12.5px;
+  color: #fff;
+  flex: none;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 0 2px var(--surface), 0 2px 6px -2px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+.av.lg {
+  width: 64px;
+  height: 64px;
+  font-size: 20px;
+}
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.who b {
+  font-weight: 600;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.who span {
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  margin: 0 -20px -20px;
+  border-top: 1px solid var(--line);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th {
+  text-align: left;
+  font-weight: 700;
+  color: var(--faint);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 11px 20px;
+  background: color-mix(in srgb, var(--surface-2) 70%, var(--surface));
+  white-space: nowrap;
+}
+td {
+  padding: 12px 20px;
+  border-top: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+  white-space: nowrap;
+}
+tbody tr {
+  cursor: default;
+  transition: background 0.12s;
+}
+tbody tr.click {
+  cursor: pointer;
+}
+tbody tr:hover td {
+  background: color-mix(in srgb, var(--ac, var(--brand)) 4.5%, transparent);
+}
+
+/* Bars & Lists */
+.bar {
+  height: 7px;
+  background: color-mix(in srgb, var(--line) 70%, var(--surface-2));
+  border: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--ac, var(--brand)) 70%, #fff), var(--ac, var(--brand)));
+  border-radius: 20px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-top: 1px solid var(--line);
+}
+.row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.row .grow {
+  flex: 1;
+  min-width: 0;
+}
+.row .sub {
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+/* Form Controls & Inputs */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  align-items: center;
+}
+.input,
+select.input,
+textarea.input {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 8px 12px;
+  min-width: 0;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.input:hover {
+  border-color: color-mix(in srgb, var(--ac, var(--brand)) 25%, var(--line));
+}
+.input:focus,
+.input:focus-visible {
+  outline: 0;
+  border-color: var(--ac, var(--brand));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ac, var(--brand)) 16%, transparent);
+}
+.search {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+  max-width: 360px;
+}
+.search input {
+  width: 100%;
+  padding-left: 36px;
+}
+.search svg {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--faint);
+}
+.tabs {
+  display: inline-flex;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 3px;
+  gap: 2px;
+}
+.tabs button {
+  border: 0;
+  background: none;
+  padding: 6px 12px;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+.tabs button.on {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 46px 16px 40px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.mt {
+  margin-top: 18px;
+}
+.muted {
+  color: var(--muted);
+}

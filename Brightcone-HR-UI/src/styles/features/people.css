@@ -1,0 +1,104 @@
+/* ==========================================================================
+   People & Profile Feature Styles - Under 400 lines
+   ========================================================================== */
+
+.profile-hero-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 18px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+
+.profile-hero-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #0D9488;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(13, 148, 136, 0.3);
+  flex-shrink: 0;
+}
+
+.profile-tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-card);
+  padding-bottom: 2px;
+}
+
+.profile-tab-btn {
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.profile-tab-btn:hover {
+  color: var(--text-title);
+  background: var(--bg-card-hover);
+}
+
+.profile-tab-active {
+  background: var(--bg-card) !important;
+  color: var(--text-title) !important;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-card);
+}
+
+.profile-details-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px 20px;
+}
+
+@media (max-width: 1024px) {
+  .profile-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile-field-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.profile-field-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-title);
+  line-height: 1.4;
+}

@@ -1,0 +1,21 @@
+pub use super::audit_logs::Entity as AuditLogs;
+pub use super::course_assignments::Entity as CourseAssignments;
+pub use super::course_categories::Entity as CourseCategories;
+pub use super::course_reminders::Entity as CourseReminders;
+pub use super::course_skills::Entity as CourseSkills;
+pub use super::courses::Entity as Courses;
+pub use super::cycle_reviews::Entity as CycleReviews;
+pub use super::employee_skills::Entity as EmployeeSkills;
+pub use super::employees::Entity as Employees;
+pub use super::password_resets::Entity as PasswordResets;
+pub use super::performance_goals::Entity as PerformanceGoals;
+pub use super::performance_reviews::Entity as PerformanceReviews;
+pub use super::posh_records::Entity as PoshRecords;
+pub use super::refresh_tokens::Entity as RefreshTokens;
+pub use super::review_cycles::Entity as ReviewCycles;
+pub use super::security_trainings::Entity as SecurityTrainings;
+pub use super::skills::Entity as Skills;
+pub use super::training_programmes::Entity as TrainingProgrammes;
+pub use super::users::Entity as Users;
+
+pub use super::signature_templates::Entity as SignatureTemplates;

@@ -1,0 +1,42 @@
+pub mod api;
+pub mod common;
+pub mod employee;
+pub mod home;
+pub mod hr_admin;
+pub mod page;
+
+pub mod auth;
+pub mod learn;
+pub mod performance;
+
+pub mod admin_users;
+pub mod approvals;
+pub mod audit_log;
+pub mod docs;
+pub mod exports;
+pub mod files;
+pub mod health;
+pub mod me;
+pub mod notifications;
+pub mod people;
+pub mod people_csv;
+pub mod people_mutations;
+pub mod people_reference_mutations;
+pub mod people_references;
+pub mod people_security;
+pub mod record_types;
+pub mod records;
+pub mod rules;
+
+pub mod attendance;
+pub mod comp_off;
+pub mod holidays;
+pub mod leave_calc;
+pub mod leave_quotas;
+pub mod leave_requests;
+pub mod leave_types;
+pub mod roster;
+pub mod shifts;
+pub mod signature_templates;
+pub mod swaps;
+pub mod wfh;

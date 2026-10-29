@@ -1,0 +1,242 @@
+/* =========================================================
+   LOGIN SCREEN STYLING — Brightcone People Plus
+   ========================================================= */
+
+.login {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  background: var(--bg);
+  overflow-y: auto;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.login[hidden],
+.app[hidden] {
+  display: none;
+}
+
+.lp {
+  position: relative;
+  overflow: hidden;
+  background: #06101f;
+  color: #fff;
+  padding: 44px 52px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+:root[data-theme='dark'] .lp {
+  background: #040a1a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .lp {
+    background: #040a1a;
+  }
+}
+.lp::before {
+  content: '';
+  position: absolute;
+  right: -180px;
+  bottom: -200px;
+  width: 640px;
+  height: 640px;
+  background: conic-gradient(from 210deg, var(--brand), var(--brand-2), transparent 62%);
+  filter: blur(60px);
+  opacity: 0.5;
+}
+.lp::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(180deg, #000 10%, transparent 85%);
+  -webkit-mask-image: linear-gradient(180deg, #000 10%, transparent 85%);
+}
+.lp > * {
+  position: relative;
+  z-index: 1;
+}
+.lp .logo {
+  padding: 0;
+}
+.lp h2 {
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin: auto 0 18px;
+  max-width: 16ch;
+}
+.lp .lede {
+  color: #c9d3ee;
+  max-width: 42ch;
+  margin: 0 0 28px;
+  font-size: 16px;
+}
+.lp .tag {
+  font: 500 14px Sora, sans-serif;
+  color: var(--brand-2);
+  margin-bottom: 14px;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13.5px;
+  max-width: 340px;
+}
+.glass b {
+  display: block;
+  font-size: 14px;
+}
+.glass span {
+  color: #c9d3ee;
+}
+.glass .ok {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(21, 163, 107, 0.2);
+  color: #4be0a5;
+  flex: none;
+}
+.glasses {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: auto;
+}
+.glasses .glass:nth-child(2) {
+  margin-left: 36px;
+}
+.lp .foot {
+  margin-top: 36px;
+  color: #93a0c4;
+  font-size: 13px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Right pane */
+.lf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+.lcard {
+  width: 100%;
+  max-width: 400px;
+}
+.lcard h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.lcard .sub {
+  color: var(--muted);
+  margin: 0 0 26px;
+}
+.lcard .field {
+  margin-bottom: 16px;
+}
+.lcard .input {
+  padding: 11px 13px;
+  font-size: 15px;
+}
+.lerr {
+  background: var(--bad-bg);
+  color: var(--bad);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13.5px;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+.btn.block {
+  width: 100%;
+  justify-content: center;
+  padding: 11px 14px;
+  font-size: 15px;
+}
+.or {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--faint);
+  font-size: 13px;
+  margin: 18px 0;
+}
+.or::before,
+.or::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.demo {
+  margin-top: 26px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--surface-2);
+}
+.demo p {
+  margin: 0 0 8px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.demo button {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 9px;
+  padding: 9px 11px;
+  margin-top: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+}
+.demo button:hover {
+  border-color: var(--brand);
+}
+.demo button span {
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .login {
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+  }
+  .lp {
+    min-height: auto;
+    padding: 28px 24px;
+  }
+  .lp h2 {
+    margin-top: 28px;
+    font-size: 28px;
+  }
+  .glasses,
+  .lp .foot {
+    display: none;
+  }
+}

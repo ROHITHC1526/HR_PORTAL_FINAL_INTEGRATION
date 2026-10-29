@@ -1,0 +1,134 @@
+/* =========================================================
+   BRAND TOKENS & THEMES — Brightcone People Plus
+   ========================================================= */
+:root {
+  --brand-navy: #0b2641;
+  --brand: #0b6fdb;
+  --brand-2: #0ba6cc;
+  --brand-soft: #e3f0ff;
+  --brand-teal: #12c2a2;
+}
+
+/* Light theme */
+:root {
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --surface-2: #f8fafd;
+  --line: #e6eaf3;
+  --text: #0e1730;
+  --muted: #5b6787;
+  --faint: #8d97b0;
+  --side-bg: #06101f;
+  --side-text: #c9d3ee;
+  --side-active: #ffffff;
+  --ok: #15a36b;
+  --ok-bg: #e3f6ee;
+  --warn: #c98200;
+  --warn-bg: #fff4db;
+  --bad: #d93d4a;
+  --bad-bg: #fde8ea;
+  --info: var(--brand);
+  --info-bg: var(--brand-soft);
+  --shadow: 0 1px 2px rgba(14, 23, 48, 0.04), 0 10px 30px -18px rgba(14, 23, 48, 0.2);
+  --shadow-lg: 0 2px 4px rgba(14, 23, 48, 0.05), 0 22px 44px -22px rgba(14, 23, 48, 0.32);
+  --r-lg: 18px;
+  --r-md: 10px;
+  --r-sm: 7px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #070e22;
+    --surface: #0e1833;
+    --surface-2: #122042;
+    --line: #1b2950;
+    --text: #e8edfb;
+    --muted: #9aa6c6;
+    --faint: #6a779a;
+    --side-bg: #050b1c;
+    --side-text: #93a0c4;
+    --side-active: #ffffff;
+    --brand-soft: #16275a;
+    --ok-bg: #0e3326;
+    --warn-bg: #3a2c08;
+    --bad-bg: #3d141b;
+    --info-bg: #16275a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 32px -18px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.4), 0 26px 50px -22px rgba(0, 0, 0, 0.8);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #070e22;
+  --surface: #0e1833;
+  --surface-2: #122042;
+  --line: #1b2950;
+  --text: #e8edfb;
+  --muted: #9aa6c6;
+  --faint: #6a779a;
+  --side-bg: #050b1c;
+  --side-text: #93a0c4;
+  --side-active: #ffffff;
+  --brand-soft: #16275a;
+  --ok-bg: #0e3326;
+  --warn-bg: #3a2c08;
+  --bad-bg: #3d141b;
+  --info-bg: #16275a;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 32px -18px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.4), 0 26px 50px -22px rgba(0, 0, 0, 0.8);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 Figtree, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.003em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Sora, Figtree, system-ui, sans-serif;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--ac, var(--brand)) 25%, transparent);
+}

@@ -1,0 +1,194 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 10, 23, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+  padding: 16px;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 680px;
+  width: 100%;
+  box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.5);
+  animation: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.certificatePaper {
+  background: linear-gradient(135deg, #FCFDFF 0%, #F5F8FF 100%);
+  border: 2px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 36px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.8), 0 8px 24px -10px rgba(11, 111, 219, 0.15);
+}
+
+:global([data-theme="dark"]) .certificatePaper {
+  background: linear-gradient(135deg, #0B162C 0%, #060F20 100%);
+  border-color: #1E2D4E;
+}
+
+.watermark {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 220px;
+  height: 220px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.certHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logoBadge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0B6FDB, #0BA6CC);
+  color: #FFFFFF;
+  display: grid;
+  place-items: center;
+  font-family: Sora, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.certOrg {
+  font-family: Sora, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0B6FDB;
+}
+
+.certTitle {
+  font-family: Sora, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+
+.certSubtitle {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+
+.recipientLabel {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 6px;
+}
+
+.recipientName {
+  font-family: Sora, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0B6FDB;
+  margin: 0 0 16px;
+  text-decoration: underline;
+  text-decoration-color: rgba(11, 111, 219, 0.3);
+  text-underline-offset: 6px;
+}
+
+.courseName {
+  font-family: Sora, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+
+.certMetaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--line);
+  text-align: left;
+}
+
+.metaItem label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.metaItem span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.printBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 11px;
+  background: #0B6FDB;
+  color: #FFFFFF;
+  border: 1px solid #0B6FDB;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.printBtn:hover {
+  background: #0A5FC0;
+}
+
+.closeBtn {
+  border-radius: 11px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text);
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}

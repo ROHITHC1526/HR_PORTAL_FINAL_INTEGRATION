@@ -1,0 +1,66 @@
+.animate-spinner { animation: spin 0.8s linear infinite; }
+.animate-skeleton-shimmer { animation: skeleton-shimmer 1.2s linear infinite; }
+.animate-modal-backdrop { animation: modal-fade 0.18s ease-out; }
+.animate-drawer-backdrop { animation: modal-fade 0.2s ease-out; }
+.animate-modal-panel { animation: modal-pop 0.2s cubic-bezier(0.16, 1, 0.3, 1); }
+.animate-drawer-right { animation: drawer-slide-right 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+.animate-drawer-left { animation: drawer-slide-left 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+.animate-toast { animation: toast-in 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes skeleton-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modal-pop {
+  from {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes drawer-slide-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes drawer-slide-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes toast-in {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

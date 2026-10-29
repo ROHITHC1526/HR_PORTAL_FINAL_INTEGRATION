@@ -1,0 +1,127 @@
+/* =========================================================
+   ADVANCED HR MODULES & GOVERNANCE — Brightcone People Plus
+   ========================================================= */
+
+/* Access Control Matrix */
+.matrix td,
+.matrix th {
+  text-align: center;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+.matrix td:first-child,
+.matrix th:first-child {
+  text-align: left;
+}
+.matrix input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--brand);
+}
+
+/* Timeline & Actions List */
+.tline {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0 0 0 6px;
+  position: relative;
+}
+.tline::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--line);
+}
+.tline li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 8px 0;
+  position: relative;
+}
+.tline .tdot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+  background: var(--surface);
+  color: var(--ac);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ac) 30%, var(--line));
+  z-index: 1;
+}
+.tline .sub {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Compliance Scorecards Grid */
+.compgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+.compcard {
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font: inherit;
+  color: inherit;
+}
+.compcard:disabled {
+  cursor: default;
+}
+.compcard .ct {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.compcard .ct b {
+  font-size: 14px;
+}
+.compcard .cv {
+  font: 600 26px Sora, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Organizational Structure Tree */
+.org {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.org ul {
+  list-style: none;
+  padding-left: 26px;
+  margin: 0;
+  border-left: 1px dashed var(--line);
+  margin-left: 16px;
+}
+.org li {
+  padding: 6px 0;
+}
+.org .node {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.org .node:hover {
+  border-color: var(--brand);
+}
+.org .node span {
+  color: var(--muted);
+  font-size: 12.5px;
+  display: block;
+}

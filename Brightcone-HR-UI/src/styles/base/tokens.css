@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Design Tokens & Themes - Under 400 lines
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Dark Void */
+  --bg-void: #040A1A;
+  --bg-app: #070E22;
+  --bg-card: #0E1833;
+  --bg-card-hover: #122042;
+  --border-card: #1D2B52;
+  --border-card-hover: rgba(56, 189, 248, 0.45);
+  
+  /* Text */
+  --text-title: #F8FAFD;
+  --text-body: #C9D3EE;
+  --text-muted: #93A0C4;
+  
+  /* Brand */
+  --brand-blue: #0B87FF;
+  --brand-cyan: #14B8E6;
+  --brand-purple: #7C3AED;
+  --brand-violet: #6366F1;
+  --brand-teal: #0D9488;
+  --brand-emerald: #10B981;
+  
+  /* Surface */
+  --surface: #0E1833;
+  --surface-2: #122042;
+  --line: #1D2B52;
+
+  /* Recruit Theme Accents */
+  --recruit-accent: #6366F1;
+  --recruit-badge: #818CF8;
+  --recruit-soft: rgba(99, 102, 241, 0.12);
+
+  /* People Theme Accents */
+  --people-accent: #0D9488;
+  --people-badge: #14B8A6;
+  --people-soft: rgba(13, 148, 136, 0.12);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+}
+
+[data-theme="light"] {
+  --bg-void: #F8FAFC;
+  --bg-app: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
+  --border-card: #E2E8F0;
+  --border-card-hover: #CBD5E1;
+  
+  --text-title: #0F172A;
+  --text-body: #334155;
+  --text-muted: #64748B;
+  
+  --brand-blue: #0284C7;
+  --brand-cyan: #0EA5E9;
+  --brand-purple: #6D28D9;
+  --brand-violet: #4F46E5;
+  --brand-teal: #0F766E;
+  --brand-emerald: #059669;
+
+  --surface: #FFFFFF;
+  --surface-2: #F8FAFC;
+  --line: #E2E8F0;
+
+  --recruit-accent: #4F46E5;
+  --recruit-badge: #6366F1;
+  --recruit-soft: rgba(99, 102, 241, 0.08);
+
+  --people-accent: #0D9488;
+  --people-badge: #0F766E;
+  --people-soft: rgba(13, 148, 136, 0.08);
+
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}

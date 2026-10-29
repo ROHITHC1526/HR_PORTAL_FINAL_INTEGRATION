@@ -1,0 +1,11 @@
+[alias]
+start = "run -- start"
+loco = "run --"
+loco-tool = "run --bin tool --"
+playground = "run --example playground"
+
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-L", "native=C:/Program Files/PostgreSQL/18/lib"]
+
+[env]
+PQ_LIB_DIR = "C:\\Program Files\\PostgreSQL\\18\\lib"

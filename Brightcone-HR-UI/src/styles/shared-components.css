@@ -1,0 +1,76 @@
+/* ---------- P1-15 design system: tabs, progress, stats, empty, skeleton ---------- */
+.tabs > [role='tablist'] {
+  @apply [display:flex] [gap:4px] [border-bottom:1px_solid_var(--border)] [margin-bottom:16px];
+}
+.tab {
+  @apply [background:none] [border:0] [border-bottom:2px_solid_transparent] [padding:8px_14px] [color:var(--muted)] [font:inherit] [font-weight:500] [cursor:pointer] [border-radius:var(--radius-sm)_var(--radius-sm)_0_0];
+}
+.tab:hover {
+  @apply [color:var(--text)];
+}
+.tab.active {
+  @apply [color:var(--brand)] [border-bottom-color:var(--brand)];
+}
+.tab:focus-visible {
+  @apply [outline:2px_solid_var(--focus)] [outline-offset:2px];
+}
+
+.progress {
+  @apply [display:flex] [flex-direction:column] [gap:6px];
+}
+.progress-head {
+  @apply [display:flex] [justify-content:space-between] [font-size:0.875rem] [color:var(--muted)];
+}
+.progress-value {
+  @apply [font-variant-numeric:tabular-nums] [color:var(--text)] [font-weight:500];
+}
+.progress-track {
+  @apply [height:8px] [border-radius:999px] [background:var(--surface-2,_var(--border))] [overflow:hidden];
+}
+.progress-fill {
+  @apply [height:100%] [background:var(--brand)] [border-radius:999px] [transition:width_0.2s];
+}
+
+.stat-tile {
+  @apply [background:var(--surface)] [border:1px_solid_var(--border)] [border-radius:var(--radius)] [padding:16px] [display:flex] [flex-direction:column] [gap:4px] [min-width:0];
+}
+.stat-label {
+  @apply [font-size:0.8125rem] [color:var(--muted)];
+}
+.stat-value {
+  @apply [font-size:1.75rem] [font-weight:600] [line-height:1.1] [color:var(--text)] [font-variant-numeric:tabular-nums];
+}
+.stat-hint {
+  @apply [font-size:0.75rem] [color:var(--muted)];
+}
+
+.empty-state {
+  @apply [border:1px_dashed_var(--border)] [border-radius:var(--radius)] [padding:40px_24px] [text-align:center] [display:flex] [flex-direction:column] [align-items:center] [gap:8px];
+}
+.empty-title {
+  @apply [margin:0] [font-weight:600] [color:var(--text)];
+}
+.empty-body {
+  @apply [margin:0] [color:var(--muted)] [font-size:0.9375rem];
+}
+
+.skeleton-group {
+  @apply [display:flex] [flex-direction:column] [gap:10px];
+}
+.skeleton {
+  @apply [height:14px] [border-radius:var(--radius-sm)] [background:linear-gradient(_90deg,_var(--border)_0%,_var(--surface)_50%,_var(--border)_100%_)] [background-size:200%_100%] animate-skeleton-shimmer;
+}
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    @apply [animation:none];
+  }
+  .progress-fill {
+    @apply [transition:none];
+  }
+  .modal-box,
+  .drawer-panel,
+  .toast {
+    animation: none !important;
+    transition: none !important;
+  }
+}

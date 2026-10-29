@@ -1,0 +1,286 @@
+/* =========================================================
+   SUITE LAYOUT — Rail, Sidebar, Header & Canvas
+   ========================================================= */
+.app {
+  display: grid;
+  grid-template-columns: 78px 236px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border-top: 3px solid var(--ac, var(--brand));
+}
+
+/* ---------- App Rail (78px) ---------- */
+.rail {
+  background: linear-gradient(180deg, #0b1d38 0%, #06101f 45%, #040a17 100%);
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 8px 18px;
+  gap: 2px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  position: relative;
+  z-index: 2;
+}
+.rail::-webkit-scrollbar {
+  display: none;
+}
+.rlogo {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 50px;
+  margin-bottom: 12px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.rlogo img {
+  width: 34px;
+  height: auto;
+}
+.rapps {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  align-items: center;
+}
+.rapp {
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 2px 8px;
+  border: 0;
+  background: none;
+  border-radius: 12px;
+  color: var(--side-text);
+  cursor: pointer;
+  font: 600 10.5px/1.15 Figtree, sans-serif;
+  text-align: center;
+  position: relative;
+}
+.rapp i {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #dce4f7;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+.rapp i svg {
+  width: 18px;
+  height: 18px;
+}
+.rapp:hover {
+  color: #fff;
+}
+.rapp:hover i {
+  background: rgba(255, 255, 255, 0.12);
+}
+.rapp.on {
+  color: #fff;
+}
+.rapp.on i {
+  background: linear-gradient(140deg, color-mix(in srgb, var(--ac) 70%, #fff) -20%, var(--ac) 60%);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 10px 24px -8px var(--ac), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.rapp.on::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 12px;
+  height: 30px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--ac);
+}
+.rapp .bdg {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  background: var(--bad);
+  color: #fff;
+  font: 700 10px/14px Figtree, sans-serif;
+  font-style: normal;
+  padding: 0 4px;
+  border: 2px solid var(--side-bg);
+}
+
+/* ---------- Sidebar (236px) ---------- */
+.side {
+  background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--surface) 92%, var(--bg)));
+  color: var(--text);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  padding: 18px 12px 14px;
+  overflow-y: auto;
+  position: relative;
+}
+.apphead {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 2px 8px 18px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 4px;
+}
+.apphead i {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(140deg, color-mix(in srgb, var(--ac) 70%, #fff) -20%, var(--ac) 60%);
+  flex: none;
+  box-shadow: 0 10px 22px -10px var(--ac), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.apphead b {
+  font: 600 17px Sora, sans-serif;
+  display: block;
+  letter-spacing: -0.015em;
+}
+.apphead span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.navgroup {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-weight: 700;
+  color: var(--faint);
+  padding: 16px 10px 6px;
+}
+.ngitems {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: 9px 11px;
+  border-radius: 10px;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  transition: background 0.15s, color 0.15s;
+}
+.nav svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  opacity: 0.85;
+}
+.nav:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+.nav.active {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--ac) 15%, transparent), color-mix(in srgb, var(--ac) 5%, transparent));
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ac) 16%, transparent);
+}
+.nav.active svg {
+  color: var(--ac);
+  opacity: 1;
+}
+.nav.active::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--ac);
+}
+.nav .count {
+  margin-left: auto;
+  background: var(--bad);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 1px 7px;
+}
+.side-foot {
+  margin-top: auto;
+  padding: 14px 8px 4px;
+  position: relative;
+  z-index: 1;
+}
+.agent-card {
+  background: linear-gradient(135deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  font-size: 13px;
+}
+.side-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.side-user > div {
+  min-width: 0;
+  flex: 1;
+}
+.side-user b {
+  color: var(--text);
+  display: block;
+  font-size: 13.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.side-user span {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.side-user button {
+  margin-left: auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}

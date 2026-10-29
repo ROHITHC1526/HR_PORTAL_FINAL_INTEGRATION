@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap');
+@import './styles/base/tokens.css';
+@import './styles/base/typography.css';
+@import './styles/layout/navigation.css';
+@import './styles/components/cards.css';
+@import './styles/components/tables.css';
+@import './styles/components/modals.css';
+@import './styles/features/recruit.css';
+@import './styles/features/people.css';
+
+/* Payroll & People Plus styles */
+@import './styles/tokens.css';
+@import './styles/animations.css';
+@import './styles/design-system-v3.css';
+@import './styles/overlays-and-tables.css';
+@import './styles/suite.css';
+@import './styles/modules.css';
+@import './styles/components.css';
+@import './styles/kanban-and-roster.css';
+@import './styles/advanced-hr.css';
+@import './styles/tables.css';
+@import './styles/overlays.css';
+@import './styles/social-sign.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
